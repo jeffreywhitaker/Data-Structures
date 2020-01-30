@@ -10,10 +10,12 @@ class Stack:
 
     def push(self, value):
         self.storage.add_to_head(value)
+        self.size += 1
         return True
 
     def pop(self):
         if self.len() > 0:
+            self.size -= 1
             return self.storage.remove_from_head()
         return None
 
